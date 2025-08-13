@@ -61,9 +61,6 @@ h6 {
     --clr-blue-900: hsl(217, 19%, 24%);
     --clr-blue-950: hsl(218, 23%, 16%);
 
-    /* Shadow */
-    --clr-green-300-tr: hsl(150, 100%, 66%, 0.25);
-
     /* Font */
     --ff-main: Manrope, sans-serif;
     --fw-bold: 800;
@@ -128,6 +125,38 @@ h6 {
 
 .advice-card__dice-icon {
     width: 30px;
+}
+
+.skeleton {
+    animation: skeleton-loading 1000ms infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    from {
+        background-color: var(--clr-skeleton);
+    }
+    to {
+        background-color: var(transparent);
+    }
+}
+
+.skeleton-text {
+    display: inline-block;
+    height: 1em;
+    border-radius: 4px;
+}
+
+.skeleton-text--advice-id {
+    --clr-skeleton: var(--clr-green-300);
+    width: 3em;
+    position: relative;
+    top: 0.125em;
+    border-radius: 999px;
+}
+
+.skeleton-text--advice-content {
+    --clr-skeleton: var(--clr-blue-200);
+    width: 85%;
 }
 
 .rotate-infinite {

@@ -7,7 +7,21 @@
     const adviceRollButton = document.getElementById("advice-roll");
     const adviceDiceIcon = adviceRollButton.querySelector("img");
 
-    let isFetchingAdvice = false;
+    let isFetchingAdvice = true;
+    adviceDiceIcon.classList.add(DICE_FETCH_ANIMATION);
+
+    (async function () {
+        const { id, advice } = await getRandomAdvice();
+
+        adviceIdDisplay.classList.remove("skeleton");
+        adviceIdDisplay.classList.remove("skeleton-text");
+        adviceIdDisplay.classList.remove("skeleton-text--advice-id");
+
+        adviceIdDisplay.textContent = id;
+        adviceContentDisplay.textContent = advice;
+
+        isFetchingAdvice = false;
+    })();
 
     adviceRollButton.addEventListener("click", rollClickHandler);
     adviceDiceIcon.addEventListener("animationiteration", animationHandler);
