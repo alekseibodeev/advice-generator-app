@@ -77,13 +77,14 @@ h6 {
 .layout {
     min-height: 100dvh;
     display: grid;
-    place-content: center;
+    align-content: center;
 }
 
 .advice-card {
     background-color: var(--clr-blue-900);
-    max-width: 33.75rem;
+    width: min(100%, 33.75rem);
     padding: 2.8125rem;
+    margin-inline: auto;
     border-radius: 0.8125rem;
     text-align: center;
     position: relative;
