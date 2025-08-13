@@ -119,8 +119,13 @@ h6 {
     cursor: pointer;
 }
 
-.advice-card__dice:hover {
+.advice-card__dice:hover,
+.advice-card__dice:focus-visible {
     box-shadow: 0px 0px 1.875rem 0.3125rem var(--clr-green-300);
+}
+
+.advice-card__dice:focus {
+    outline: none;
 }
 
 .advice-card__dice-icon {
