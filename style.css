@@ -130,6 +130,20 @@ h6 {
     width: 30px;
 }
 
+.rotate-infinite {
+    animation: rotate 1000ms ease infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0;
+    }
+
+    to {
+        rotate: 1turn;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .page {
         font-size: 24px;
