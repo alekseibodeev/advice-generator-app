@@ -32,11 +32,17 @@
                             difficult is getting up and taking action.
                         </q>
                     </p>
-                    <img
-                        class="advice-card__divider"
-                        src="./images/pattern-divider-desktop.svg"
-                        alt=""
-                    />
+                    <picture class="advice-card__divider">
+                        <source
+                            srcset="./images/pattern-divider-mobile.svg"
+                            media="(max-width: 600px)"
+                        />
+                        <img
+                            class="advice-card__divider"
+                            src="./images/pattern-divider-desktop.svg"
+                            alt=""
+                        />
+                    </picture>
                     <button id="advice-roll" class="advice-card__dice">
                         <img
                             class="advice-card__dice-icon"

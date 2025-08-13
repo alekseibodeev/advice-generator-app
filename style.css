@@ -129,3 +129,29 @@ h6 {
 .advice-card__dice-icon {
     width: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .page {
+        font-size: 24px;
+    }
+
+    .layout {
+        margin-inline: 15px;
+    }
+
+    .advice-card {
+        padding: 25px;
+    }
+
+    .advice-card__id {
+        font-size: 11px;
+    }
+
+    .advice-card__content {
+        margin-bottom: 20px;
+    }
+
+    .advice-card__divider {
+        margin-bottom: 40px;
+    }
+}
